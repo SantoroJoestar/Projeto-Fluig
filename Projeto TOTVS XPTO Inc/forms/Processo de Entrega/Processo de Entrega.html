@@ -1,0 +1,114 @@
+<html>
+<head>
+	<link type="text/css" rel="stylesheet" href="/style-guide/css/fluig-style-guide.min.css"/>
+	<script type="text/javascript" src="/portal/resources/js/jquery/jquery.js"></script>
+	<script type="text/javascript" src="/portal/resources/js/jquery/jquery-ui.min.js"></script>
+	<script type="text/javascript" src="/portal/resources/js/mustache/mustache-min.js"></script>
+	<script type="text/javascript" src="/style-guide/js/fluig-style-guide.min.js" charset="utf-8"></script>
+</head>
+<body>
+<div class="fluig-style-guide">
+<form name="form" role="form">
+
+	<div class="panel panel-primary">
+		<div class="panel-heading">
+			<h3 class="panel-title"> <i class="flaticon flaticon-company icon-md" aria-hidden="true"> Formulário de Entrega</i></h3>
+		</div>
+	<div class="panel-body">
+		<div class="row"> 
+			<div class="form-group col-md-2">
+				<label for="cep">CEP</label>	
+				<input type="text" name="cep" id="cep" class="form-control" mask="00000-000">
+			</div>
+	
+			<div class="form-group col-md-5">
+				<label for="rua">Rua</label>	
+				<input type="text" name="logradouro" id="logradouro" class="form-control" readonly>
+			</div>
+	
+			<div class="form-group col-md-4">
+				<label for="cidade">Cidade</label>	
+				<input type="text" name="cidade" id="cidade" class="form-control" readonly>
+			</div>
+			
+			<div class="form-group col-md-4">
+				<label for="cidade">Estado</label>	
+				<input type="text" name="estado" id="estado" class="form-control" readonly>
+			</div>
+			
+			<div class="form-group col-md-4">
+				<label for="filialDestino">Filial de Destino </label>
+					<input
+					  type="zoom" 
+					  id = "responsavel"
+					  name="responsavel"
+					  data-zoom="{
+								'displayKey':'responsavel',
+								'datasetId':'dsCadastroDeFilialXPTO',
+								'placeholder':'Selecione o Responsável',
+								'fields':[
+									{						
+										'field':'responsavel',
+										'label':'Responsável'
+									},
+									{
+										'field':'nome',
+										'label':'Nome',
+										'standard':'true'
+									}
+									]
+								  }"  />
+			</div>
+			
+			
+		
+					<div class="form-group col-md-4">
+						<label for="filialDestino">Ponto de Coleta</label>
+							<input
+							  type="zoom" 
+							  id = "pontoColeta"
+							  name="pontoColeta"
+							  data-zoom="{
+										'displayKey':'pontoColeta',
+										'datasetId':'dsColetaUnidadeXPTO',
+										'placeholder':'Selecione o Ponto de Coleta',
+										'fields':[
+											{						
+												'field':'pontoColeta',
+												'label':'Ponto de Coleta'
+											}
+											]
+										  }"  />
+			
+					</div>
+			
+										  
+			<div class="form-group col-md-2">
+				<label for="mercadoria">Mercadoria</label>	
+				<input type="text" name="mercadoria" id="mercadoria" class="form-control">
+			</div>
+										  
+			<div class="form-group col-md-2">
+				<label for="prazoEntrega">Prazo de Entrega</label>	
+				<input type="text" name="prazoEntrega" id="prazoEntrega" class="form-control">
+			</div>
+			
+			
+				<div class="form-group col-md-12">Descrição da Mercadoria</label>
+					<textarea rows="5" name="descricaoMercadoria" id="descricaoMercadoria" class="form-control"></textarea>
+				</div>
+			
+			
+		</div> 
+	</div>
+	</div> 
+
+</form>
+</div>
+</body>
+<script type="text/javascript" src="cep.js"></script>
+<script type="text/javascript">
+	var calendarioNascimento = FLUIGC.calendar("#prazoEntrega");
+	
+</script>
+</html>
