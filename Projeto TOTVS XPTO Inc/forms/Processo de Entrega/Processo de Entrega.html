@@ -1,114 +1,136 @@
 <html>
+
 <head>
-	<link type="text/css" rel="stylesheet" href="/style-guide/css/fluig-style-guide.min.css"/>
-	<script type="text/javascript" src="/portal/resources/js/jquery/jquery.js"></script>
-	<script type="text/javascript" src="/portal/resources/js/jquery/jquery-ui.min.js"></script>
-	<script type="text/javascript" src="/portal/resources/js/mustache/mustache-min.js"></script>
-	<script type="text/javascript" src="/style-guide/js/fluig-style-guide.min.js" charset="utf-8"></script>
+    <link type="text/css" rel="stylesheet" href="/style-guide/css/fluig-style-guide.min.css" />
+    <link type="text/css" rel="stylesheet" href="style.css">
+    <script type="text/javascript" src="/portal/resources/js/jquery/jquery.js"></script>
+    <script type="text/javascript" src="/portal/resources/js/jquery/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="/portal/resources/js/mustache/mustache-min.js"></script>
+    <script type="text/javascript" src="/style-guide/js/fluig-style-guide.min.js" charset="utf-8"></script>
 </head>
+
 <body>
-<div class="fluig-style-guide">
-<form name="form" role="form">
+    <div class="fluig-style-guide">
+        <form name="form" role="form">
 
-	<div class="panel panel-primary">
-		<div class="panel-heading">
-			<h3 class="panel-title"> <i class="flaticon flaticon-company icon-md" aria-hidden="true"> Formulário de Entrega</i></h3>
-		</div>
-	<div class="panel-body">
-		<div class="row"> 
-			<div class="form-group col-md-2">
-				<label for="cep">CEP</label>	
-				<input type="text" name="cep" id="cep" class="form-control" mask="00000-000">
-			</div>
-	
-			<div class="form-group col-md-5">
-				<label for="rua">Rua</label>	
-				<input type="text" name="logradouro" id="logradouro" class="form-control" readonly>
-			</div>
-	
-			<div class="form-group col-md-4">
-				<label for="cidade">Cidade</label>	
-				<input type="text" name="cidade" id="cidade" class="form-control" readonly>
-			</div>
-			
-			<div class="form-group col-md-4">
-				<label for="cidade">Estado</label>	
-				<input type="text" name="estado" id="estado" class="form-control" readonly>
-			</div>
-			
-			<div class="form-group col-md-4">
-				<label for="filialDestino">Filial de Destino </label>
-					<input
-					  type="zoom" 
-					  id = "responsavel"
-					  name="responsavel"
-					  data-zoom="{
-								'displayKey':'responsavel',
-								'datasetId':'dsCadastroDeFilialXPTO',
-								'placeholder':'Selecione o Responsável',
-								'fields':[
-									{						
-										'field':'responsavel',
-										'label':'Responsável'
-									},
-									{
-										'field':'nome',
-										'label':'Nome',
-										'standard':'true'
-									}
-									]
-								  }"  />
-			</div>
-			
-			
-		
-					<div class="form-group col-md-4">
-						<label for="filialDestino">Ponto de Coleta</label>
-							<input
-							  type="zoom" 
-							  id = "pontoColeta"
-							  name="pontoColeta"
-							  data-zoom="{
-										'displayKey':'pontoColeta',
-										'datasetId':'dsColetaUnidadeXPTO',
-										'placeholder':'Selecione o Ponto de Coleta',
-										'fields':[
-											{						
-												'field':'pontoColeta',
-												'label':'Ponto de Coleta'
-											}
-											]
-										  }"  />
-			
-					</div>
-			
-										  
-			<div class="form-group col-md-2">
-				<label for="mercadoria">Mercadoria</label>	
-				<input type="text" name="mercadoria" id="mercadoria" class="form-control">
-			</div>
-										  
-			<div class="form-group col-md-2">
-				<label for="prazoEntrega">Prazo de Entrega</label>	
-				<input type="text" name="prazoEntrega" id="prazoEntrega" class="form-control">
-			</div>
-			
-			
-				<div class="form-group col-md-12">Descrição da Mercadoria</label>
-					<textarea rows="5" name="descricaoMercadoria" id="descricaoMercadoria" class="form-control"></textarea>
-				</div>
-			
-			
-		</div> 
-	</div>
-	</div> 
+            <div class="panel panel-primary">
+                <div class="panel-heading">
+                    <h3 class="panel-title"> <i class="flaticon flaticon-company icon-md" aria-hidden="true"> Formulário
+                            de Entrega</i></h3>
+                </div>
 
-</form>
-</div>
+                <div class="panel panel-default">
+                    <div class="panel-body">
+                        <div class="row">
+                            <div class="form-group col-md-1">
+                                <label for="cep">CEP*</label>
+                                <input type="text" name="cep" id="cep" class="form-control" mask="00000-000"
+                                    placeholder="Ex: 12345-678">
+                            </div>
+
+                            <div class="form-group col-md-2">
+                                <label for="rua">Rua*</label>
+                                <input type="text" name="logradouro" id="logradouro" class="form-control" readonly>
+                            </div>
+
+                            <div class="form-group col-md-1">
+                                <label for="numero">Número*</label>
+                                <input type="text" name="numero" id="numero" class="form-control" placeholder="Ex: 56">
+                            </div>
+
+                            <div class="form-group col-md-2">
+                                <label for="cidade">Cidade*</label>
+                                <input type="text" name="cidade" id="cidade" class="form-control" readonly>
+                            </div>
+
+                            <div class="form-group col-md-1">
+                                <label for="cidade">Estado*</label>
+                                <input type="text" name="estado" id="estado" class="form-control" readonly>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="panel panel-default">
+                    <div class="panel-body">
+                        <div class="row">
+                            <div class="form-group col-md-3">
+                                <label for="filialDestino">Filial de Destino* </label>
+                                <input type="zoom" id="filialDestino" name="filialDestino" data-zoom="{
+                                'displayKey':'nome',
+                                'datasetId':'dsCadastroDeFilialXPTO',
+                                'placeholder':'Selecione o Responsável',
+                                'fields':[
+                                    {						
+                                        'field':'nome',
+                                        'label':'Filial'
+                                    },
+                                    {
+                                        'field':'responsavelAlmoxarifado',
+                                        'label':'Responsavel',
+                                        'standard':'true'
+                                    },
+                                    {
+                                        'field':'valorLogin',
+                                        'label':'Login'
+                                    }
+                                    ]
+                                  }" />
+                            </div>
+
+                            <div class="form-group col-md-2">
+                                <label for="prazoEntrega">Prazo de Entrega*</label>
+                                <input type="text" name="prazoEntrega" id="prazoEntrega" class="form-control">
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="panel panel-default">
+                    <div class="panel-body">
+                        <div class="row">
+                            <div class="form-group col-md-7"><label for="descricaoMercadoria">Descrição da
+                                    Mercadoria*</label>
+                                <textarea rows="5" name="descricaoMercadoria" id="descricaoMercadoria"
+                                    class="form-control"
+                                    placeholder="Descreva a mercadoria, cuidados necessários, atenções ou o que julgar necessário aqui:"></textarea>
+                            </div>
+
+
+                            <div class="form-group col-md-2 confirmaEntrega" id="confirmaEntrega">
+                                <label for="entregou">Confirma Recebimento da Entrega? </label>
+
+                                <div class="row">
+                                    <div class="col-md-12 flex">
+                                        <input type="radio" name="entregou" id="sim" class="rinput" value="sim">
+                                        <label for="sim" class="rlabel">
+                                            <i class="fa fa-check fa-2x" aria-hidden="true"></i>
+                                            <span>Sim</span>
+                                        </label>
+                                        <input type="radio" name="entregou" id="nao" class="rinput" value="nao">
+                                        <label for="nao" class="rlabel">
+                                            <i class="fa fa-times-circle fa-2x" aria-hidden="true"></i>
+                                            <span>Não</span>
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+
+                <div class="form-group col-md-2">
+                    <input type="hidden" id="valorLogin" name="valorLogin" class="form-control" readonly>
+                </div>
+                <div class="form-group col-md-2">
+                	<input type="hidden" id="entregouValor" name="entregouValor" class="form-control" readonly>
+                </div>
+
+        </form>
+    </div>
 </body>
 <script type="text/javascript" src="cep.js"></script>
-<script type="text/javascript">
-	var calendarioNascimento = FLUIGC.calendar("#prazoEntrega");
-	
-</script>
+<script type="text/javascript" src="script.js"></script>
+
 </html>

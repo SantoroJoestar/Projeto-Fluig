@@ -29,7 +29,7 @@
 								name="codigo" id="codigo" class="form-control">
 						</div>
 
-						<div class="form-group col-md-4">
+						<div class="form-group col-md-3">
 							<label for="nome">Nome</label> <input type="text" name="nome"
 								id="nome" class="form-control">
 						</div>
@@ -39,32 +39,37 @@
 								name="endereco" id="endereco" class="form-control">
 						</div>
 
-						<div class="form-group col-md-4">
-							<label for="responsavelAlmoxarifado">Responsável do
-								Almoxarifado </label> <input type="zoom" id="responsavel"
-								name="responsavel"
-								data-zoom="{
-								'displayKey':'login',
-								'datasetId':'dsResponsaveisArtur',
-								'placeholder':'Selecione o Responsável',
-								'fields':[
-									{						
-										'field':'login',
-										'label':'ID'
-									},
-									{
-										'field':'nome',
-										'label':'Nome',
-										'standard':'true'
-									}
-									]
-								  }" />
+						<div class="form-group col-md-3">
+								<label for="responsavelAlmoxarifado">Responsável do Almoxarifado </label>
+									<input
+									  type="zoom" 
+									  id = "responsavelAlmoxarifado"
+									  name="responsavelAlmoxarifado"
+									  data-zoom="{
+												'displayKey':'colleagueName',
+												'datasetId':'colleague',
+												'placeholder':'Selecione o Responsável',
+												'fields':[
+													{						
+														'field':'colleagueName',
+														'label':'Responsável'
+													},
+													{
+														'field':'login',
+														'label':'Login',
+														'standard':'true'
+													}
+													]
+												  }"  />
+						</div>
+						<div class="form-group col-md-2">
+							<input type="hidden" id="valorLogin" name="valorLogin" class="form-control" readonly>
 						</div>
 					</div>
 				</div>
 			</div>
-
 		</form>
 	</div>
 </body>
+<script src="script.js"></script>
 </html>

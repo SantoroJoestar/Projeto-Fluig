@@ -2,21 +2,27 @@ function enableFields(form) {
     var formMode = form.getFormMode();
     var activityId = getValue("WKNumState");
 
+    form.setVisibleById("confirmaEntrega", false);
     
-    if(formMode == 'ADD' || activityId == '8') {
+    if(activityId == 2) {
+    	form.setVisibleById("confirmaEntrega", true);
+    }
+    
+    if(formMode == 'ADD' || activityId == '4') {
     	form.setEnabled("cep", true); 
-        form.setEnabled("responsavel", true); 
-        form.setEnabled("pontoColeta", true); 
-        form.setEnabled("mercadoria", true); 
+        form.setEnabled("filialDestino", true); 
         form.setEnabled("prazoEntrega", true); 
         form.setEnabled("descricaoMercadoria", true); 
+        form.setEnabled("numero", true); 
     }else{
     	  form.setEnhancedSecurityHiddenInputs(true);
           form.setEnabled("cep", false); 
-          form.setEnabled("responsavel", false); 
-          form.setEnabled("pontoColeta", false); 
-          form.setEnabled("mercadoria", false); 
+          form.setEnabled("filialDestino", false); 
           form.setEnabled("prazoEntrega", false); 
+          form.setEnabled("numero", false); 
           form.setEnabled("descricaoMercadoria", false); 
     }
+    
+    
+    
 }
