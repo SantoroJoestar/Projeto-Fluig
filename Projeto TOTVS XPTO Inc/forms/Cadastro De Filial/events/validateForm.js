@@ -2,7 +2,7 @@ function validateForm(form){
 		
 	var nome = form.getValue("nome");
 	var endereco = form.getValue("endereco");
-	var responsavelAlmoxarifado = form.getValue("responsavel");
+	var responsavelAlmoxarifado = form.getValue("responsavelAlmoxarifado");
 	
 	if(nome == "") {
 		throw " Campo Nome não foi preenchido ";
